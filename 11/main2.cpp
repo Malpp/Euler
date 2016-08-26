@@ -4,6 +4,14 @@ using namespace std;
 
 int main() {
 	
+	struct Num {
+		
+		int n;
+		int x;
+		int y;
+		
+	};
+	
 	int dirs[16] = {0,-1,0,1,-1,0,1,0,1,-1,1,1,-1,1,-1,-1};
 
     long long finalN = 0;
@@ -28,64 +36,12 @@ int main() {
 						20,69,36,41,72,30,23,88,34,62,99,69,82,67,59,85,74, 4,36,16,
 						20,73,35,29,78,31,90, 1,74,31,49,71,48,86,81,16,23,57, 5,54,
 						 1,70,54,71,83,51,54,69,16,92,33,48,61,43,52, 1,89,19,67,48};
-						 
-	for( int i = 0; i < 20; i++ ){ //Loop through height of array
-
-        for( int j = 0; j < 20; j++ ){ //Loop through width of array
-
-            int n = array[i][j];
-			
-			if( n != 0 ){
-
-				long long rows[8] = {n,n,n,n,n,n,n,n};
-
-				for( int r = 0; r < 8; r++ ){ //Loop through all possibilities
-				
-					for( int k = 1; k < 4; k++ ){ //Loop through 3 numbers away from center
-						
-						int x = j;
-						int y = i;
-						
-						x += (k * dirs[r*2]);
-						y += (k * dirs[r*2 + 1]);
-						
-						if( x >= 0 && y >= 0 && y <= 19 && x <= 19 ){
-							
-							rows[r] *= array[y][x];
-						
-						} else {
-							
-							rows[r] = 0;
-							
-							break;
-							
-						}
-
-					}
-
-				}
-				
-				for( int r = 0; r < 8; r++ ){
-					
-					if( rows[r] > finalN ){
-						
-						finalN = rows[r];
-						
-					}
-					
-				}
-				
-			}
-
-        }
-
-	}
 	
-	cout << finalN << endl;
-
+	cout << array[1][2]*array[2][3]*array[3][4]*array[4][5] << endl;
+	
 	cout << "Done" << endl;
 	
 	cin.ignore();
-
+	
 	return 0;
 }
