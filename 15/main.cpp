@@ -4,8 +4,8 @@ using namespace std;
 
 int main() {
 
-    int width = 3;
-    int height = 3;
+    int width = 4;
+    int height = 4;
 
     int arr[width][height];
 
@@ -79,7 +79,7 @@ int main() {
 
         }
 
-        if( arr[1][1] == 1 ){
+        if( arr[0][0] == 1 ){
 
             break;
 
@@ -88,7 +88,9 @@ int main() {
     }
 
 
-    cout << total*2;
+    cout << total;
+	
+	cin.ignore();
 
     return 0;
 

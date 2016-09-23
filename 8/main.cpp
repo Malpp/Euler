@@ -47,5 +47,7 @@ int main (){
     cout << finalN << endl;
 
 	cout << "Done" << endl;
+	
+	cin.ignore();
 
 }
