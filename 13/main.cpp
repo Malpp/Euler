@@ -121,6 +121,8 @@ int main() {
 		sum = addNum(sum,array[i]);
 	
 	}
+	
+	cout << sum << endl;
 
 	for( int i = 0; i < 10; i++ ){
 		
